@@ -1,0 +1,75 @@
+<!-- 클릭했을 대 무언가 하기는 '클릭 이벤트'라고 합니다.
+  회원가입을 했을 대 중복 체크 버튼을 누르면 중복 체크를 하는 긴으이 구현되는 것을 예로 들 수 있습니다.
+  단순히 어떠한 엘리먼트를 클릭만 하는 기능을 구현할 때는 click()을 사용합니다.
+
+  클릭하는 기능을 구현하는 방법
+  $('selector').click();
+
+  id가 hello인 엘리먼트를 클릭하는 방법
+  $('#hello').click();
+
+  이 방법은 id가 hello인 엘리먼트를 사용자가 클릭하는 것과 같은 기능을 합니다.
+  클릭 이벤트를 만들려면 click() 안에 기능을 넣어야 합니다.
+  기능을 넣기 위해서는 click()의 괄호 안에 function(){}을 넣어야 합니다.
+  이는 기능을 넣겠다는 것을 의미합니다.-->
+
+<!-- 클릭 이벤트에 기능을 넣는 방법
+  $('#hello').click(funciton(){});
+
+클릭 했을 때 어떠한 기능을 하는 명령문은 function(){}의 {}안에 작성해야 합니다.
+
+클릭 이벤트에 명령문을 작성하는 방법
+  $('#hello').click(function(){
+    //이 곳에 id가 hello인 엘리먼트를 클릭했을 대 실행할 명령문을 작성
+  })
+-->
+
+<!-- 예를 들어, id가 world인 엘리먼트를 숨기는 기능을 만들고 싶다면 다음과 같이 작성해야 합니다.
+  $('#hello').click(function(){
+    $('#world').hide();
+  });
+-->
+
+<!--다음은 [보이기]와 [숨기기] 버튼이 있는 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>클릭이벤트 만들기</title>
+  <link rel = "stylesheet" href = "../css/cssEx/cssReset.css" />
+  <style>
+    #targetBox{width:400px; height:200px; background:skyblue; display:none}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      //보이기 기능
+      $('#btnShow').click(function(){
+        $('#targetBox').show();
+      });
+
+      //숨기기 기능
+      $('#btnhide').click(function(){
+        $('#targetBox').hide();
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <input type = "button" id = "btnShow" value = "보이기" />
+  <input type = "button" id = "btnhide" value = "숨기기" />
+
+  <div id = "targetBox">
+    target box
+  </div>
+</body>
+</html>
+
+<!--코드설명
+  42라인에 targetBox가 보이지 않도록 display 속성값에 none을 적용했습니다.
+
+  48라인에 id가 btnShow를 눌렀을 때 targetBox가 보이도록 하였습니다.
+  53라인데 id가 btnhide를 눌렀을 때 targetBox가 안 보이도록 하였습니다.
+-->
