@@ -1,0 +1,35 @@
+<!-- 제이쿼리를 이용하면 엘리먼트에 CSS 속성을 적용할 수 있습니다.
+  css()를 사용한 후 2개의 값이 들어갑니다.
+  첫 번째 값은 css의 속성값이고, 두 번째 값은 CSS 속성값입니다. -->
+
+<!-- 제이쿼리를 이용하여 CSS를 적용하는 방법
+  $('선택자').css('CSS 속성', '값');
+
+  id값이 logo인 엘리먼트의 텍스트 색을 하늘색으로 변경하는 방법
+  $('logo').css('color','skyblue');
+-->
+
+<!-- 다음은 클릭 이벤트를 사용한 예제입니다.
+[저를 클릭하면 글씨 색이 변합니다.]라는 문구를 클릭하면 글씨 색이 변경되는 예제입니다.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>제이쿼리로 CSS 컨트롤 </title>
+  <link rel = "stylesheet" href = "../css/cssEx/cssReset.css" />
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#colorChange').click(function(){
+        $('#colorChange').css('color','skyblue');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id = "colorChange">저를 클릭하면 글씨 색이 변합니다.</div>
+</body>
+</html>
+
+<!-- 10라인에서 id가 colorChange인 엘리먼트에 이벤트를 생성했으며,
