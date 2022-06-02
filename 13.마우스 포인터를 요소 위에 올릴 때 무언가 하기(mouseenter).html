@@ -1,0 +1,53 @@
+<!-- 이번에는 마우스 오버 이벤트를 알아보겠습니다.
+  마우스 포인터를 어떠한 엘리먼트 위에 올려놓았을 때 무언가 작동하게 하는 기능을
+  마우스 오버 이벤트라고 합니다.
+
+  엘리먼트 위에 마우스 포인터로 올려놓았을 때 이벤트가 발생하도록 하려면 mouseenter()을 사용합니다.
+
+  mouseenter() 사용 방법
+  $('selector').mouseenter();
+
+  사용자가 어떠한 엘리먼트 위에 마우스 포인터를 올려놓은 것과 같은 기능을 합니다.
+
+  id가 hello인 엘리먼트 위에 마우스 포인터를 올려놓은 경우
+  $('#hello').mouseenter();
+
+  마우스 오버 이벤트를 만들려면 mouseneter() 안에 기능을 넣어야 합니다.
+  클릭 이벤트와 같습니다. 기능을 넣으려면 mouseenter()의 괄호 안에 function(){}을 넣어야 합니다.
+
+  사용방법
+  $('#hello').mouseenter(function(){});
+
+  id가 hello인 엘리먼트 위에 마우스 포인터를 올려놓았을 때 alert()을 나타내는 방법
+
+  $('#hello').mouseenter(function(){
+    alert('안녕하세요');
+  });
+-->
+
+<!-- 다음은 마우스 포인터 이벤트를 구현한 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>마우스오버이벤트 만들기</title>
+  <link rel "stylesheet" href = "../css/cssEx/cssReset.css" />
+  <style>
+    #greeting{float:left;width:300px;height:100px;margin:50px;background:skyblue}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#greeting').mouseenter(function(){
+        alert('Hello World');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id = "greeting">마우스 포인터를 여기에 올리세요.</div>
+</body>
+</html>
+
+<!-- 박스위에 마우스 포인터를 올리면 "Hello World"라는 문구가 뜹니다. -->
