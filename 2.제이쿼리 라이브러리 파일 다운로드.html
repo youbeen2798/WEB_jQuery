@@ -1,0 +1,43 @@
+<!-- 우선 [exampleSource] 폴더 안에 [jQuery] 폴더를 생성합니다.
+  예제는 [jQuery] 폴더에 작성하며 자바스크립트 라이브러리 코드를 저장하기 위해
+  [jQuery] 폴더 안에 [js]폴더를 생성합니다.
+
+  다음은 제이쿼리를 사용할 수 있는 라이브러리 파일을 다운로드하는 예제입니다.
+  (URL을 직접 웹페이지에서 열어 복사, 붙여넣기를 하다가 발생하는 실수를 막기 위한 방법)
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>제이쿼리 라이브러리 파일 다운로드</title>
+</head>
+<body>
+  <a href = "http://mybook.everdevel.com/js/jquery-3.1.0.min.js" download>
+    에버디벨 서버에서 jQuery 파일 다운로드
+  </a>
+  <br />
+  <a href = "https://code.jquery.com/jquery-3.1.0.min.js" download>
+    제이쿼리 공식 서버에서 jQuery 파일 다운로드
+  </a>
+</body>
+</html>
+
+<!-- 링크를 눌러 파일을 다운로드한 후, 생성한 [jQuery] 폴더 안에 있는 [js] 폴더에
+  다운로드한 파일을 옮깁니다.
+
+  HTML 파일에서 다운로드 한 제이쿼리 라이브러리 파일을 사용하려면 head 태그 내에
+  다음과 같은 소스를 입력해야 합니다.
+
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+
+  CSS3 코드를 사용할 대 head 태그 내에 style 태그를 생성했듯이 jQuery 코드를 사용하려면
+  head 태그 내에 script 태그를 생성해야 합니다.
+
+  <script>
+    $(function(){
+      //이곳에 제이쿼리 소스를 작성합니다.
+    });
+  </script>
+
+  $(function(){와 });사이에 작성하지 않으면 제이쿼리 소스는 작동하지 않습니다. -->
