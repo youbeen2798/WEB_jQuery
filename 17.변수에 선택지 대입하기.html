@@ -1,0 +1,35 @@
+<!-- 같은 선택자를 반복해서 사용할 때는 변수에 담아 사용하는 것이 좋습니다.
+  선택자를 사용하면 컴퓨터는 해당 선택자를 사용할 때마다 해당 문서를 분석하여
+  해당 선택자를 찾는 과정을 거치기 때문에 변수에 한 번 담아놓으면 그 이후로는
+  담아놓은 선택자를 사용하므로 효율성 면에서 좋습니다. -->
+
+<!-- 다음은 선택자를 변수에 담아 클릭 이벤트 기능을 구현한 예제입니다.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8"/>
+  <title>변수 선언</title>
+  <style>
+    #addCss{float:left;width:300px;height:100px;margin:20px}
+  </style>
+  <link rel = "stylesheet" href = "../css/cssEx/cssReset.css" />
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+
+    $(function(){
+
+      //변수 선언
+      addCss = $('#addCss');
+
+      addCss.click(function(){
+        addCss.css('background','skyblue');
+        addCss.css('border-radius','10px');
+      });
+    });
+  </script>
+</head>
+<body>
+    <div id = "addCss">저를 클릭하면 배경과 border-radius를 적용합니다.</div>
+</body>
+</html>
