@@ -1,0 +1,37 @@
+<!-- 다음은 2개의 박스를 만들어 1개의 박스에는 텍스트를 입력하고 다른 박스에는 입력하지 않은 후
+  제이쿼리로 텍스트가 입력되지 않은 박스를 클릭하면 다른 박스와 같은 텍스트가 입력되도록 하는 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>텍스트 제어하기</title>
+  <style>
+    div{float:left;width:100px; height:100px; margin:20px}
+    #box1{background:skyblue}
+    #box2{background:hotpink}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      box1 = $('#box1');
+      box2 = $('#box2');
+
+      box2.click(function(){
+        box2.text(box1.text());
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- box1에는 hello world를 입력-->
+  <div id = 'box1'>
+    hello world
+  </div>
+
+  <!-- box2에는 입력하지 않음-->
+  <div id = 'box2'>
+  </div>
+</body>
+</html>
