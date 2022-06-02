@@ -1,0 +1,27 @@
+<!-- 다음은 클릭하면 alert창이 나타나는 예제입니다.
+  alert()를 사용할 때 나타나는 표시할 텍스트는 '또는 "에 묶어 사용합니다.
+  '로 시작하면 '로 끝나야 하며 "로 시작하면 "로 끝나야 합니다.
+
+  alert()사용방법
+  alert('사용할 문구');
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset ="utf-8" />
+  <title>클릭이벤트 만들기</title>
+  <link rel = "stylesheet" href = "../css/cssEx/cssReset.css" />
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#greeting').click(function(){
+        alert('hello World');
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type = "button" id = "greeting" value = "인사말" />
+</body>
+</html>
