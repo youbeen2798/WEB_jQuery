@@ -1,0 +1,42 @@
+<!-- 제이쿼리를 이용하여 HTML 엘리먼트에 있는 텍스트를 변경할 수도 있습니다.
+
+  text() 사용 방법
+  $('selector').text('변경할 텍스트');
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>텍스트 제어하기</title>
+  <style>
+    #greeting{margin:50px}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      greeting = $('#greeting');
+
+      greeting.click(function(){
+        greeting.text('클릭 후 입니다');
+
+
+      greeting.click(function(){
+        greeting.text('클릭 후후 입니다');
+
+      });
+    });
+
+  });
+  </script>
+</head>
+<body>
+  <div id = "greeting">클릭 전 입니다. </div>
+</body>
+</html>
+
+<!-- 19라인에서 $('greeting')을 변수 greeting으로 선언하였습니다.
+  22라인에서 greeting.text('클릭 후 입니다')를 통해 클릭을 한 번 했을 때 해당 텍스트가 나오도록 합니다.
+  26라인에서 greeting.text('클릭 후후 입니다')를 통해 클릭을 2번 했을 때 해당 텍스트가 나오도록 합니다.
+-->
