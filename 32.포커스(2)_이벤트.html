@@ -1,0 +1,42 @@
+<!-- 포커스 기능은 어떠한 입력 필드에서 바로 값을 입력하도록 하는 기능입니다.
+  포털 사이트에 접속하면 검색어 입력 필드가 포커스되어 있는데 이것이 바로 포커스 기능입니다. -->
+
+<!-- 포커스 사용방법
+  $('selector').focus();
+-->
+
+<!-- 포커스 기능 외에 포커스했을 때 어떠한 작동을 하는 포커스 이벤트도 있습니다.
+
+  포커스 이벤트 만드는 방법
+  $('selector').focus(function(){
+    //포커스 시 동작할 기능을 입력
+  });
+-->
+
+<!-- 다음은 장소 입력 폼에 포커스를 줄 때 alert()가 작동하는 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>포커스이벤트</title>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      $('#location').focus(function(){
+        alert('장소는 국가만 입력해 주세요.');
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type = "text" id = "name" placeholder = "이름을 입력하세요." /><br />
+  <input type = "text" id = "age" placeholder="나이를 입력하세요." /><br />
+  <input type = "text" id = "gender" placeholder = "성별을 입력하세요."/><br />
+  <input type = "text" id = "location" placeholder="장소를 입력하세요." /><br />
+</body>
+</html>
+
+ <!-- 코드설명
+   27~28라인에서 location이 focus가 되었을 때, '장소는 국가만 입력해 주세요.'라는 문구가 뜨게 됩니다. -->
