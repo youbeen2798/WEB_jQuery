@@ -1,0 +1,63 @@
+<!-- 동일한 선상에 있는 HTML 엘리먼트를 다른 HTML 엘리먼트의 자식 엘리먼트로 넣는 기능에 대해 알아보겠습니다.
+
+  다음과 같은 소스에서 부모 엘리먼트1과 부모 엘리먼트2는 같은 위치에 있습니다.
+
+  <div id = "parent">
+    부모 엘리먼트1
+  </div>
+
+  <div id = "parent2">
+    부모 엘리먼트2
+  </div>
+
+  위의 소스를 다음과 같이 변경할 수 있습니다.
+  <div id = "parent">
+    부모 엘리먼트1
+    <div id = "parent2">
+      부모 엘리먼트2
+    </div>
+  </div>
+
+  이를 구현하려면 append라는 기능을 사용해야 합니다.
+  $('selector').append(선택자 안으로 들어갈 엘리먼트);
+-->
+
+<!-- 다음은 id값이 parent1인 박스에 id값이 parent2인 박스사 들어가는 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset= "utf-8"/>
+  <title>엘리먼트의 이동</title>
+  <style>
+    #parent #parent2{width:100px; height:100px; background:skyblue}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      parent = $('#parent');
+      parent2 = $('#parent2');
+      btn = $('#btn');
+
+      btn.click(function(){
+        parent.append(parent2);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id = "parent">
+    부모 엘리먼트1
+  </div>
+  <div id = "parent2">
+    부모 엘리먼트2
+  </div>
+  <input id = "btn" type = "button" value = "버튼" />
+</body>
+</html>
+
+<!-- 코드설명
+  33라인은 id가 parent인 엘리먼트 속에 id가 parent2를 가진 엘리먼트에게 CSS 속성을 부여하였습니다.
+  49~52라인은 id가 parent인 엘리먼트와 id가 parent2인 엘리먼트가 각각 존재하므로 CSS 속성을 부여받지 못합니다.
+  하지만, 42라인에 id가 btn인 엘리먼트를 클릭했을 때, id가 parent인 엘리먼트의 자식으로 parent2를 가지도록 하였습니다.
+  따라서, 화면 속 "버튼"이라고 쓰여진 button을 클릭하면 parent2에게 가로 100, 세로 100, 색깔이 하늘색인 CSS가 적용됩니다. -->
