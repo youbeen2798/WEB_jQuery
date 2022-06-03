@@ -1,0 +1,49 @@
+<!-- 제이쿼리를 이용하면 form 태그에 사용되는 태그의 값을 변경할 수 있습니다.
+  이는 웹 개발을 할 때 자주 사용하는 기능이며, 매우 쉽습니다.
+  값을 조정하려면 val()이라는 기능을 사용합니다.
+  text(), html()처럼 val()만 사용할 경우 값을 가져오게 되고, 괄호 안에 값을 넣으면 값이 입력됩니다. -->
+
+<!-- val 사용방법
+
+  <input type = "text" id = "guestName" value = "김태영" />
+  위의 input 태그를 예로 김태영이라는 값을 가져오려면 다음 코드를 사용해야 합니다.
+
+  $('#guestName').val();
+
+  또한 위의 input 태그의 값을 김유나로 바꾸려면 다음과 같이 사용해야 합니다.
+  $('#guestName').val('김유나');
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>값 제어하기</title>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      nameList = $('#nameList');
+      btn = $('#btn');
+
+      btn.click(function(){
+        nameList.val('김민후');
+      });
+    });
+  </script>
+</head>
+<body>
+  <select id = "nameList">
+    <option value = "김민후">김민후</option>
+    <option value = "김혜윤" selected>김혜윤</option>
+    <option value = "김태영">김태영</option>
+    <option value = "김미우">김미우</option>
+    <option value = "김유나">김유나</option>
+  </select>
+  <input type = "button" id = "btn" value = "버튼" />
+</body>
+</html>
+
+<!-- 코드 설명
+  38라인에 아무것도 선택하지 않았을 때, 선택값은 김혜윤이 되는 소스입니다.
+  29라인에 btn을 클릭했을 때, id가 nameList인 엘리먼트의 값이 김민후가 되는 소스입니다. -->
