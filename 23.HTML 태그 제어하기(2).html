@@ -1,0 +1,47 @@
+<!-- 기존 엘리먼트 안에 있는 내용도 유지하면서 추가로 새로운 태그를 넣는 방법에 대해 알아봅시다.
+  이 경우에는 기존 내용을 따로 변수에 넣은 후 새로 넣을 내용과 합치는 방식이 있습니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset= "utf-8" />
+  <title>HTML 태그 제어하기</title>
+  <style>
+    #box1{float:left; width:300px; height:100px; margin:20px; background:skyblue}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      box1 = $('#box1');
+
+      box1.click(function(){
+
+        //새로운 변수를 만든 후 기존의 box1 안에 있는 내용을 대입
+        box1Content = box1.html();
+
+        //입력할 img태그를 변수로 선언
+        image = "<img src = 'http://mybook.everdevel.com/images/happyCat.png' />";
+
+        //변수 box1Content와 변수 image 입력
+        box1.html(box1Content+image);
+
+        //이미지 사이즈 조정
+        $('#box1 img').css('width','100px');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id = "box1">
+    이 박스를 클릭하면 이미지가 나타납니다.
+  </div>
+</body>
+</html>
+
+
+<!-- 코드설명
+  21라인에서 box1Content라는 변수를 선언한 후 box1의 html 태그를 값으로 대입했습니다.
+  그러므로 현재 box1의 html태그를 갖고 있습니다.
+  24라인에서 데빌캣 이미지 주소를 담고 있는 img태그를 image 변수에 저장합니다.
+  27라인에서 box1Content라는 변수와 image변수를 box1 바긋 안에 입력합니다. -->
