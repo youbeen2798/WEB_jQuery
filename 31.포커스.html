@@ -1,0 +1,26 @@
+<!-- 포커스 기능은 어떠한 입력 필드에서 바로 값을 입력하도록 하는 기능입니다.
+  포털 사이트에 접속하면 검색어 입력 필드가 포커스되어 있는데 이것이 바로 포커스 기능입니다. -->
+
+<!-- 포커스 사용방법
+  $('selector').focus();
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>포커스</title>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      $('#gender').focus();
+    });
+  </script>
+</head>
+<body>
+  <input type = "text" id = "name" placeholder = "이름를 입력하세요."/><br />
+  <input type = "text" id = "age" placeholder = "나이를 입력하세요."/><br />
+  <input type = "text" id = "gender" placeholder = "성별를 입력하세요."/><br />
+  <input type = "text" id = "location" placeholder = "장소를 입력하세요."/><br />
+</body>
+</html>
