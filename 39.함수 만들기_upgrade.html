@@ -1,0 +1,66 @@
+<!-- 파라미터는 함수 내에서 사용할 변수명을 기입합니다.
+  즉, 덧셈을 할 값 2개를 받는다고 할 때, 첫 번째 값을 num1, 두 번째 값을 num2라고 가정하면, 사용방법은 다음과 같습니다.
+
+  파라미터에 이름 붙이는 방법
+  function 함수이름(num1, num2{
+    //수행할 기능 삽입
+  }
+
+  num1과 num2를 더하고 그 값을 console.log()를 통해 출력한다고 가정하면, 사용 방법은 다음과 같습니다.
+
+  function 함수이름(num1, num2){
+    result = num1 + num2;
+    console.log('num1과 num2를 더한 값은 '+ result);
+  };
+
+  지금까지 함수를 만드는 방버에 대해 알아보았습니다.
+  함수의 이름은 변수명을 만들 때 사용하는 방법과 같습니다.
+  특수 문자가 들어가서는 안 되며, 함수 이름의 첫 번째의 숫자가 들어가서도 안됩니다.
+  함수를 호출하는 방법은 함수명을 적은 후 함수에 전달할 값을 입력하면 되비낟.
+
+  함수 호출 방법
+
+  함수 이름(전달할 값 또는 변수); 아규먼트 입력
+
+  함수 이름이 plus이고 전달할 변수명이 hi이면
+  plus(hi);
+
+  함수를 호출할 때 넣는 변수를 아규먼트(argument)라고 합니다.
+-->
+
+<!-- 다음은 더하기 기능을 함수로 만든 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>함수 사용하기</title>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      function add(num1,num2){
+        result = num1 + num2;
+        console.log(num1 + '와 '+ num2 + '를 더한 값은 ' + result);
+      }
+
+      a = 10;
+      b = 20;
+      c = 30;
+      d = 40;
+
+      add(a,b);
+      add(b,c);
+      add(c,d);
+      add(d,a);
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+<!--코드설명
+  52라인부터 55라인까지 각각의 다른 아규먼트를 add 함수에 전달하며 호출합니다.
+  호출받은 함수는 파라미터 num1, num2에 받은 값을 43라인에서 덧셈한 후 result에 저장하고
+  44라인에서 console.log()로 출력합니다. -->
