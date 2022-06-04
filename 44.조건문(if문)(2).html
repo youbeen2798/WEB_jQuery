@@ -1,0 +1,44 @@
+<!-- if문에 들어가는 조건에는 변수가 될 수도 있으며, 숫자, 문자가 될 수도 있습니다.
+  다음 예제처럼 함수를 넣을 수도 있습니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset= "utf-8" />
+  <title>조건문</title>
+  <style>
+    div{float:left; width:100px; height:100px; margin:50px}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+
+      var box1 = $('#box1');
+      var box2 = $('#box2');
+      var box3 = $('#box3');
+
+      if(box1.text() == 'box 2'){
+        box1.css('background','yellow');
+      }
+      else if(box2.text() == 'box 2'){
+        box2.css('background','skyblue');
+      }
+      else if(box3.text() == 'box 3'){
+        box3.css('background','hotpink');
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id = "box1">box 1</div>
+  <div id = "box2">box 2</div>
+  <div id = "box3">box 3 </div>
+</body>
+</html>
+
+<!--코드설명
+  조건문에서 box1.text()를 사용했습니다.
+  box1.text()은 box1의 변수이고, 값은 $('#box1')입니다.
+  즉, id가 box1인 엘리먼트의 텍스트를 가져오고, 그 값은 'box 1'입니다.(box 2와 같지 않으므로 거짓)
+  참이 되는 조건은 23~25라인과 26~27라인입니다.
+  하지만 23~25라인이 먼저 참으로 적용되어, id가 box2인 엘리먼트의 css값이 적용되어 바탕색이 하늘색이 됩니다. -->
