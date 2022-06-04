@@ -1,0 +1,53 @@
+<!--  if와 else의 단점은 경우의 수가 두 가지 밖에 없다는 것입니다.
+  조건을 추가하려면 else if문을 사용합니다.
+
+  else if문 사용방법
+
+  var num1 = 1;
+  var num2 = 10;
+  var num3 = 30;
+  if(num1 == num2){
+    //거짓
+  }
+  else if(num1 < num3){
+    //참
+  }
+  else{
+    위의 두 조건들이 모두 거짓이면 실행
+  }
+-->
+
+<!-- else if문을 사용하면 조건을 추가할 수 있고, if문 없이 else문을 사용하면 문법 에러가 발생합니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>조건문</title>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      var num1 = 200;
+      console.log('num1 is '+ num1);
+
+      var num2 = 300;
+      console.log('num2 is '+ num2);
+
+      if(num1 == num2){
+        console.log('num1과 num2가 같습니다. ');
+      }
+      else if(num1 <= num2){
+        console.log('num1이 num2보다 작습니다. ');
+      }
+      else{
+        console.log('num1은 num2와 같지도 작지도 않습니다. ');
+      }
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+<!--코드설명
+  39라인까지 오기 위해서는 이미 num1과 num2은 같지 않은것이므로, 40라인이 참이기 위해서는 num1이 num2보다 작아야 합니다. -->
