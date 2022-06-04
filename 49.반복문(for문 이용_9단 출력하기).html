@@ -1,0 +1,30 @@
+<!-- 9단을 출력하는 예제입니다. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8" />
+  <title>반복문</title>
+  <style>
+    .box{float:left; width:90px; height:90px}
+  </style>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      for(var i = 2; i<=9; i++){
+        console.log(i+'단 시작');
+        for(var s = 1; s<=9; s++){
+          console.log(i+' * '+s+' = '+i*s);
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 코드설명
+  i가 2인 동안 2번째 for문은 9번의 계산을 합니다.
+  예를 들어, i가 2이고 s가 1일 때 i*s는 2*1이므로 2가 출력되고, 이러한 작동이 반복되면서
+  2단부터 9단까지의 결과가 나오게 됩니다. -->
