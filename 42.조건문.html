@@ -1,0 +1,59 @@
+<!-- 조건문은 if라는 명령문을 사용합니다.
+  그리고 if라는 명령문의 조건이 참이면 해당 명령을 실행하고, 참이 아니면 실행하지 않습니다. -->
+
+<!--  if문 조건식 사용 방법
+  var a = 10;
+  var b = 20;
+
+  if(a ==b){
+    //참일 때 사용할 명령어
+  }
+-->
+
+<!-- if문의 판단이 참이 아닐 때 사용하는 명령문은 else문입니다.
+  else문 사용방법
+
+  var a = 10;
+  var b = 20;
+  if(a==b){
+    //참일 때 사용할 명령어
+  }
+  else{
+    //참이 아닐 때 사용할 명령어
+  }
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset= "utf-8" />
+  <title>조건문</title>
+  <script type = "text/javascript" src = "./js/jquery-3.1.0.min.js"></script>
+  <script>
+    $(function(){
+      var num1 = 10;
+      console.log('num1 is' + num1);
+
+      var num2 = 20;
+      console.log('num2 is' + num2);
+
+      //num1과 num2가 같을 경우
+      if(num1 == num2){
+        //num1과 num2는 같지 않으므로 실행되지 않습니다.
+        console.log('num1과 num2의 값이 같습니다.');
+      }
+      else{
+        console.log('num1과 num2의 값이 다릅니다.');
+      }
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+<!-- 코드설명
+  변수 num1의 값에 10을 대입하고, 변수 num2의 값에 20을 대입했습니다.
+  41라인에 num1의 값과 num2의 값이 같은 경우라는 조건을 세웠으므로,
+  num1과 num2의 값은 서로 같지 않으므로 else문이 작동합니다.
+-->
